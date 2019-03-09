@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: dm-base-provider
+  datasource:
+    url: jdbc:mysql://192.168.128.132:3306/dm_base?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    service-url:
+       defaultZone: http://root:123456@localhost:7776/eureka/
+server:
+  port: 7002
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+moduleName: dm-base-provider
